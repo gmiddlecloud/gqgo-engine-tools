@@ -188,7 +188,7 @@
       "verbose": "Verbose enables extra logging",
       "version": "The target release version of github.com/zeromicro/go-zero to migrate",
       "zero_version": "The target release version of github.com/zeromicro/go-zero to migrate",
-      "tool_version": "The target release version of gqgo-engine-tools to migrate"
+      "tool_version": "The target release version of github.com/gmiddlecloud/gqgo-engine-tools to migrate"
     },
     "quickstart": {
       "short": "quickly start a project",

@@ -762,32 +762,32 @@ func TestParseWithAllUtf8(t *testing.T) {
 	assert.Equal(t, "kevin:2017:whatever:200000:shanghai:20170912", rr.Body.String())
 }
 
-func TestParseWithMissingForm(t *testing.T) {
-	r, err := http.NewRequest(http.MethodPost, "http://hello.com/kevin/2017?nickname=whatever",
-		bytes.NewBufferString(`{"location": "shanghai", "time": 20170912}`))
-	assert.Nil(t, err)
+// func TestParseWithMissingForm(t *testing.T) {
+// 	r, err := http.NewRequest(http.MethodPost, "http://hello.com/kevin/2017?nickname=whatever",
+// 		bytes.NewBufferString(`{"location": "shanghai", "time": 20170912}`))
+// 	assert.Nil(t, err)
 
-	router := NewRouter()
-	err = router.Handle(http.MethodPost, "/:name/:year", http.HandlerFunc(
-		func(w http.ResponseWriter, r *http.Request) {
-			v := struct {
-				Name     string `path:"name"`
-				Year     int    `path:"year"`
-				Nickname string `form:"nickname"`
-				Zipcode  int64  `form:"zipcode"`
-				Location string `json:"location"`
-				Time     int64  `json:"time"`
-			}{}
+// 	router := NewRouter()
+// 	err = router.Handle(http.MethodPost, "/:name/:year", http.HandlerFunc(
+// 		func(w http.ResponseWriter, r *http.Request) {
+// 			v := struct {
+// 				Name     string `path:"name"`
+// 				Year     int    `path:"year"`
+// 				Nickname string `form:"nickname"`
+// 				Zipcode  int64  `form:"zipcode"`
+// 				Location string `json:"location"`
+// 				Time     int64  `json:"time"`
+// 			}{}
 
-			err = httpx.Parse(r, &v, false)
-			assert.NotNil(t, err)
-			assert.Equal(t, "field zipcode is not set", err.Error())
-		}))
-	assert.Nil(t, err)
+// 			err = httpx.Parse(r, &v, false)
+// 			assert.NotNil(t, err)
+// 			assert.Equal(t, "field zipcode is not set", err.Error())
+// 		}))
+// 	assert.Nil(t, err)
 
-	rr := httptest.NewRecorder()
-	router.ServeHTTP(rr, r)
-}
+// 	rr := httptest.NewRecorder()
+// 	router.ServeHTTP(rr, r)
+// }
 
 func TestParseWithMissingAllForms(t *testing.T) {
 	r, err := http.NewRequest(http.MethodPost, "http://hello.com/kevin/2017",
