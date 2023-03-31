@@ -3,7 +3,7 @@ package svc
 import (
 	{{.configImport}}
 	{{if .useI18n}}
-	"gqgo-engine-common/i18n"{{end}}{{if .useEnt}}
+	"github.com/gmiddlecloud/gqgo-engine-common/i18n"{{end}}{{if .useEnt}}
 	"{{.projectPackage}}/ent"
 	"github.com/zeromicro/go-zero/core/logx"{{end}}
     {{if .useCasbin}}

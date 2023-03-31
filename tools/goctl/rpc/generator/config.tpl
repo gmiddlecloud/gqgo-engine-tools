@@ -1,7 +1,7 @@
 package config
 
 import (
-{{if .isEnt}}   "gqgo-engine-common/config"
+{{if .isEnt}}   "github.com/gmiddlecloud/gqgo-engine-common/config"
 {{end}}
     "github.com/zeromicro/go-zero/core/stores/redis"
     "github.com/zeromicro/go-zero/zrpc"

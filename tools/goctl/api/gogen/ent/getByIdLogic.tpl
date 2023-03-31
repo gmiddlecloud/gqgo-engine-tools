@@ -7,8 +7,8 @@ import (
 	"{{.projectPath}}/internal/types"
 	"{{.projectPath}}/internal/utils/dberrorhandler"
 
-    "gqgo-engine-common/i18n"
-{{if .useUUID}}    "gqgo-engine-common/utils/uuidx"
+    "github.com/gmiddlecloud/gqgo-engine-common/i18n"
+{{if .useUUID}}    "github.com/gmiddlecloud/gqgo-engine-common/utils/uuidx"
 {{end}}	"github.com/zeromicro/go-zero/core/logx"
 )
 

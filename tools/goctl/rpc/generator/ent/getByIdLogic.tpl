@@ -7,7 +7,7 @@ import (
 	"{{.projectPath}}/internal/utils/dberrorhandler"
 	"{{.projectPath}}/types/{{.projectName}}"
 
-{{if .useUUID}}    "gqgo-engine-common/utils/uuidx"
+{{if .useUUID}}    "github.com/gmiddlecloud/gqgo-engine-common/utils/uuidx"
 {{end}}	"github.com/zeromicro/go-zero/core/logx"
 )
 

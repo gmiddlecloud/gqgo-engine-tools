@@ -9,7 +9,7 @@ import (
 	"{{.projectPath}}/internal/types"
 	"{{.projectPath}}/internal/utils/dberrorhandler"
 
-    "gqgo-engine-common/i18n"
+    "github.com/gmiddlecloud/gqgo-engine-common/i18n"
     "github.com/zeromicro/go-zero/core/logx"
 )
 

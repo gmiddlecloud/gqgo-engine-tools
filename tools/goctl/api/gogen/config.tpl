@@ -1,8 +1,8 @@
 package config
 
 import (
-    {{if .useCasbin}}"gqgo-engine-common/plugins/casbin"
-    "gqgo-engine-common/config"
+    {{if .useCasbin}}"github.com/gmiddlecloud/gqgo-engine-common/plugins/casbin"
+    "github.com/gmiddlecloud/gqgo-engine-common/config"
     "github.com/zeromicro/go-zero/core/stores/redis"{{end}}
     "github.com/zeromicro/go-zero/rest"
 )

@@ -11,8 +11,8 @@ import (
 	"github.com/zeromicro/go-zero/core/stores/redis"
 	"github.com/zeromicro/go-zero/rest/httpx"
 
-	"gqgo-engine-common/enum/errorcode"
-	"gqgo-engine-common/i18n"
+	"github.com/gmiddlecloud/gqgo-engine-common/enum/errorcode"
+	"github.com/gmiddlecloud/gqgo-engine-common/i18n"
 )
 
 type AuthorityMiddleware struct {

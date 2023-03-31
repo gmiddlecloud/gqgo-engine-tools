@@ -7,7 +7,7 @@ import (
     "{{.projectPackage}}/internal/types"
     "{{.rpcPackage}}"
 
-    "gqgo-engine-common/i18n"
+    "github.com/gmiddlecloud/gqgo-engine-common/i18n"
     "github.com/zeromicro/go-zero/core/logx"
 )
 

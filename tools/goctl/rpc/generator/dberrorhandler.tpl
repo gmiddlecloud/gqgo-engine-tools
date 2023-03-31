@@ -4,8 +4,8 @@ import (
     "github.com/zeromicro/go-zero/core/errorx"
 	"github.com/zeromicro/go-zero/core/logx"
 
-	"gqgo-engine-common/i18n"
-	"gqgo-engine-common/msg/logmsg"
+	"github.com/gmiddlecloud/gqgo-engine-common/i18n"
+	"github.com/gmiddlecloud/gqgo-engine-common/msg/logmsg"
 
 	"{{ .package}}/ent"
 )
