@@ -5,7 +5,7 @@ DatabaseConf:
   Type: mysql
   Host: 127.0.0.1
   Port: 3306
-  DBName: simple_admin
+  DBName: gqgo_engine
   Username: # set your username
   Password: # set your password
   MaxOpenConn: 100
